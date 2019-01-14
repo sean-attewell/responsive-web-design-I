@@ -63,9 +63,9 @@ html, body {
 	font-family: 'Titillium Web', sans-serif;
 }
 
-body {
+.container {
 	height: 100%;
-	width: 880px;
+	max-width: 880px;
 	margin: 0 auto;
 }
 
@@ -78,6 +78,10 @@ h1, h2, h3, h4, h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 /* generic comment */
 /* Your code starts here! - attempt 2 */
+
+#tabletmobileonlyimg {
+    display: none;
+}
 
 nav {
 	display: flex;
@@ -155,10 +159,10 @@ nav img {
 	font-weight: 598;
 }
 
-.middle-img {
+/* .middle-img {
 	display: flex;
 	justify-content: center; 
-}
+} */
 
 .section2 {
 	display: flex;
@@ -202,16 +206,58 @@ footer {
 
 @media screen and (max-width: 800px) {
     /* TABLETS */
-    /* From 0 to 800px viewport width */
-    body {
-        background: pink;
+    /* From 501 to 800px viewport width */
+    .container {
+      background: pink;
+      max-width: 800px;
+      margin: 0 2.5%;
+      padding-left: 1%;
     }
 
+    #tabletmobileonlyimg {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 37px;
+        padding-left: 2%;
+    }        
+    #desktoponlyimg {
+        display: none;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .topdivclass img {
+        display: none;
+    }
+    .topdivclass div {
+        padding-right: 0;
+    }
+    
+    .headerclass {
+        justify-content: center;
+    }
+
+    .middle-img-img {
+        max-width: 100%;
+        margin-top: 21px;
+    }
+    
+    .section2 {
+        padding-bottom: 54px;
+    }
 }
+
 @media screen and (max-width: 500px) {
-    body {
-        background: aqua;
-    }  
     /* PHONES */
     /* From 0 to 500px viewport width */
+    .container {
+        background: aqua;
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    
+
 }
